@@ -1,4 +1,4 @@
-auto_scale_lr = dict(base_batch_size=16, enable=False)
+auto_scale_lr = dict(base_batch_size=1, enable=False)
 backend_args = None
 base_lr = 0.004
 checkpoint = 'https://download.openmmlab.com/mmdetection/v3.0/rtmdet/cspnext_rsb_pretrain/cspnext-tiny_imagenet_600e.pth'
@@ -179,7 +179,7 @@ resume = False
 stage2_num_epochs = 20
 test_cfg = dict(type='TestLoop')
 test_dataloader = dict(
-    batch_size=5,
+    batch_size=1,
     dataset=dict(
         ann_file='annotations/instances_val2017.json',
         backend_args=None,
@@ -268,11 +268,11 @@ train_cfg = dict(
     val_interval=10)
 train_dataloader = dict(
     batch_sampler=None,
-    batch_size=32,
+    batch_size=1,
     dataset=dict(
         ann_file='annotations/instances_val2017.json',
         backend_args=None,
-        data_prefix=dict(img='train2017/'),
+        data_prefix=dict(img='images/'),
         data_root='/datasets/COCO/',
         filter_cfg=dict(filter_empty_gt=True, min_size=32),
         pipeline=[
@@ -486,7 +486,7 @@ tta_pipeline = [
 ]
 val_cfg = dict(type='ValLoop')
 val_dataloader = dict(
-    batch_size=5,
+    batch_size=1,
     dataset=dict(
         ann_file='annotations/instances_val2017.json',
         backend_args=None,
