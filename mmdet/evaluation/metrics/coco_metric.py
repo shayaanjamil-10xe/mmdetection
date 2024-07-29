@@ -114,6 +114,9 @@ class CocoMetric(BaseMetric):
             'be saved to a temp directory which will be cleaned up at the end.'
 
         self.outfile_prefix = outfile_prefix
+        # handle dataset lazy init
+        self.cat_ids = None
+        self.img_ids = None
 
         self.backend_args = backend_args
         if file_client_args is not None:
@@ -123,8 +126,6 @@ class CocoMetric(BaseMetric):
                 'https://github.com/open-mmlab/mmdetection/blob/main/configs/_base_/datasets/coco_detection.py'  # noqa: E501
             )
 
-        # if ann_file is not specified,
-        # initialize coco api with the converted dataset
         if ann_file is not None:
             with get_local_path(
                     ann_file, backend_args=self.backend_args) as local_path:
@@ -142,10 +143,11 @@ class CocoMetric(BaseMetric):
                     self._coco_api.dataset['categories'] = sorted_categories
         else:
             self._coco_api = None
+        # if ann_file is not specified,
+        # initialize coco api with the converted dataset
 
-        # handle dataset lazy init
-        self.cat_ids = None
-        self.img_ids = None
+    def __call__(self, results: List[dict]) -> Dict[str, float]:
+        return self.compute_metrics(results)
 
     def fast_eval_recall(self,
                          results: List[dict],
@@ -229,7 +231,8 @@ class CocoMetric(BaseMetric):
             values are corresponding filenames.
         """
         bbox_json_results = []
-        segm_json_results = [] if 'masks' in results[0] else None
+        # segm_json_results = [] if 'masks' in results[0] else None
+        segm_json_results = None
         for idx, result in enumerate(results):
             image_id = result.get('img_id', idx)
             labels = result['labels']
@@ -397,7 +400,8 @@ class CocoMetric(BaseMetric):
         logger: MMLogger = MMLogger.get_current_instance()
 
         # split gt and prediction list
-        gts, preds = zip(*results)
+        # gts, preds = zip(*results)
+        preds = results
 
         tmp_dir = None
         if self.outfile_prefix is None:
@@ -415,13 +419,21 @@ class CocoMetric(BaseMetric):
 
         # handle lazy init
         if self.cat_ids is None:
-            self.cat_ids = self._coco_api.get_cat_ids(
-                cat_names=self.dataset_meta['classes'])
+            self.cat_ids = list(self._coco_api.cats.keys())
+            # self.cat_ids = self._coco_api.get_cat_ids(
+            #     cat_names=self.dataset_meta['classes'])
         if self.img_ids is None:
-            self.img_ids = self._coco_api.get_img_ids()
+            self.img_ids = list(self._coco_api.imgs.keys())
+            # self.img_ids = self._coco_api.get_img_ids()
+    
 
         # convert predictions to coco format and dump to json file
         result_files = self.results2json(preds, outfile_prefix)
+
+        # from pprint import pprint
+        # print(">><><><><><><><><><><><>><")
+        # pprint(result_files)
+        # print("<><><><><><><><><><><>><")
 
         eval_results = OrderedDict()
         if self.format_only:
@@ -460,6 +472,7 @@ class CocoMetric(BaseMetric):
                     # small/medium/large mask AP results.
                     for x in predictions:
                         x.pop('bbox')
+                # pprint(predictions)
                 coco_dt = self._coco_api.loadRes(predictions)
 
             except IndexError:
@@ -589,9 +602,9 @@ class CocoMetric(BaseMetric):
                     eval_results[key] = float(f'{round(val, 3)}')
 
                 ap = coco_eval.stats[:6]
-                logger.info(f'{metric}_mAP_copypaste: {ap[0]:.3f} '
-                            f'{ap[1]:.3f} {ap[2]:.3f} {ap[3]:.3f} '
-                            f'{ap[4]:.3f} {ap[5]:.3f}')
+                # logger.info(f'{metric}_mAP_copypaste: {ap[0]:.3f} '
+                #             f'{ap[1]:.3f} {ap[2]:.3f} {ap[3]:.3f} '
+                            # f'{ap[4]:.3f} {ap[5]:.3f}')
 
         if tmp_dir is not None:
             tmp_dir.cleanup()

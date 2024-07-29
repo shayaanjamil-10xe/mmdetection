@@ -59,6 +59,9 @@ class BaseDetector(BaseModel, metaclass=ABCMeta):
                 inputs: torch.Tensor,
                 data_samples: OptSampleList = None,
                 mode: str = 'tensor') -> ForwardResults:
+        print("*****"*10)
+        print("MEI HI CALL HOTA HOON KIYA BAAT HAI  ", mode)
+        print("*****"*10)
         """The unified entry for a forward process in both training and test.
 
         The method should accept three modes: "tensor", "predict" and "loss":

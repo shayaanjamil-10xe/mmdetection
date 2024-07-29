@@ -130,7 +130,7 @@ class SingleStageDetector(BaseDetector):
             tuple[list]: A tuple of features from ``bbox_head`` forward.
         """
         x = self.extract_feat(batch_inputs)
-        results = self.bbox_head.forward(x)
+        results = self.bbox_head.predict(x, [], True)
         return results
 
     def extract_feat(self, batch_inputs: Tensor) -> Tuple[Tensor]:

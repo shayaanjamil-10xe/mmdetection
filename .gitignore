@@ -124,3 +124,6 @@ work_dirs/
 
 # ONNX
 *.onnx
+
+corr_raw_results/*
+pred_results/*

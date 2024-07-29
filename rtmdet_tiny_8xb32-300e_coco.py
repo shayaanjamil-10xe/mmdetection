@@ -229,6 +229,7 @@ test_evaluator = dict(
         1,
         10,
     ),
+    outfile_prefix='/home/shayaan/Desktop/aimet/my_mmdet/pred_results/test',
     type='CocoMetric')
 test_pipeline = [
     dict(backend_args=None, type='LoadImageFromFile'),
