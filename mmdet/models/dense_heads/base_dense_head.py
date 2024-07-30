@@ -188,12 +188,10 @@ class BaseDenseHead(BaseModule, metaclass=ABCMeta):
             list[obj:`InstanceData`]: Detection results of each image
             after the post process.
         """
-        print("(((((((((((((heeeeeeeeeeeeeee)))))))))))))")
-        print(rescale)
+
         # batch_img_metas = [
         #     data_samples.metainfo for data_samples in batch_data_samples
         # ]
-
         outs = self(x)
 
         # predictions = self.predict_by_feat(

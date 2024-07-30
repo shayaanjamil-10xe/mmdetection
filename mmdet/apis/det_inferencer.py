@@ -41,6 +41,12 @@ ImgType = Union[np.ndarray, Sequence[np.ndarray]]
 IMG_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.ppm', '.bmp', '.pgm', '.tif',
                   '.tiff', '.webp')
 
+from mmdet.models.utils import samplelist_boxtype2tensor
+def add_pred_to_datasample(data_samples, results_list):
+    for data_sample, pred_instances in zip(data_samples, results_list):
+        data_sample.pred_instances = pred_instances
+    samplelist_boxtype2tensor(data_samples)
+    return data_samples
 
 class DetInferencer(BaseInferencer):
     """Object Detection Inferencer.
@@ -396,11 +402,27 @@ class DetInferencer(BaseInferencer):
 
         inputs = self.preprocess(
             ori_inputs, batch_size=batch_size, **preprocess_kwargs)
+        
+        predict_by_feat = self.model.bbox_head.predict_by_feat
+        rescale = True
 
         results_dict = {'predictions': [], 'visualization': []}
         for ori_imgs, data in (track(inputs, description='Inference')
                                if self.show_progress else inputs):
             preds = self.forward(data, **forward_kwargs)
+            # for x in preds:
+            #     for t in x:
+            #         t = t.detach().numpy()
+            #         name = "_".join([str(x) for x in t.shape])
+            #         path = "/home/shayaan/Desktop/aimet/my_mmdet/pred_results/det_infer_raw_results/" + str(int(ori_imgs[0].split("/")[-1].split(".")[0])) + "_" + name
+            #         np.save(path, t)
+            batch_img_metas = [
+            data_samples.metainfo for data_samples in data['data_samples']
+            ]
+            preds = predict_by_feat(*preds, batch_img_metas=batch_img_metas, rescale=rescale)
+            
+            preds = add_pred_to_datasample(data['data_samples'], preds)
+            # return
             visualization = self.visualize(
                 ori_imgs,
                 preds,

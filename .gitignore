@@ -127,3 +127,6 @@ work_dirs/
 
 corr_raw_results/*
 pred_results/*
+
+output/
+*.json

@@ -82,7 +82,8 @@ class CocoMetric(BaseMetric):
                  collect_device: str = 'cpu',
                  prefix: Optional[str] = None,
                  sort_categories: bool = False,
-                 use_mp_eval: bool = False) -> None:
+                 use_mp_eval: bool = False,
+                 dataset_meta: Optional[Dict] = None) -> None:
         super().__init__(collect_device=collect_device, prefix=prefix)
         # coco evaluation metrics
         self.metrics = metric if isinstance(metric, list) else [metric]
@@ -117,6 +118,7 @@ class CocoMetric(BaseMetric):
         # handle dataset lazy init
         self.cat_ids = None
         self.img_ids = None
+        self.dataset_meta = dataset_meta
 
         self.backend_args = backend_args
         if file_client_args is not None:
@@ -245,6 +247,7 @@ class CocoMetric(BaseMetric):
                 data['bbox'] = self.xyxy2xywh(bboxes[i])
                 data['score'] = float(scores[i])
                 data['category_id'] = self.cat_ids[label]
+                data['image_loc'] = "image_{:04d}.png".format(image_id)
                 bbox_json_results.append(data)
 
             if segm_json_results is None:
@@ -419,21 +422,13 @@ class CocoMetric(BaseMetric):
 
         # handle lazy init
         if self.cat_ids is None:
-            self.cat_ids = list(self._coco_api.cats.keys())
-            # self.cat_ids = self._coco_api.get_cat_ids(
-            #     cat_names=self.dataset_meta['classes'])
+            self.cat_ids = self._coco_api.get_cat_ids(
+                cat_names=self.dataset_meta['classes'])
         if self.img_ids is None:
-            self.img_ids = list(self._coco_api.imgs.keys())
-            # self.img_ids = self._coco_api.get_img_ids()
-    
+            self.img_ids = self._coco_api.get_img_ids()
 
         # convert predictions to coco format and dump to json file
         result_files = self.results2json(preds, outfile_prefix)
-
-        # from pprint import pprint
-        # print(">><><><><><><><><><><><>><")
-        # pprint(result_files)
-        # print("<><><><><><><><><><><>><")
 
         eval_results = OrderedDict()
         if self.format_only:
@@ -463,6 +458,7 @@ class CocoMetric(BaseMetric):
                 raise KeyError(f'{metric} is not in results')
             try:
                 predictions = load(result_files[metric])
+
                 if iou_type == 'segm':
                     # Refer to https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/coco.py#L331  # noqa
                     # When evaluating mask AP, if the results contain bbox,
