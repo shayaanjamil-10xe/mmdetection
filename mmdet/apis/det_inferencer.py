@@ -107,6 +107,9 @@ class DetInferencer(BaseInferencer):
         self.model = revert_sync_batchnorm(self.model)
         self.show_progress = show_progress
 
+        self.predict_by_feat = self.model.bbox_head.predict_by_feat
+        self.rescale = True
+
     def _load_weights_to_model(self, model: nn.Module,
                                checkpoint: Optional[dict],
                                cfg: Optional[ConfigType]) -> None:
@@ -403,13 +406,15 @@ class DetInferencer(BaseInferencer):
         inputs = self.preprocess(
             ori_inputs, batch_size=batch_size, **preprocess_kwargs)
         
-        predict_by_feat = self.model.bbox_head.predict_by_feat
-        rescale = True
 
         results_dict = {'predictions': [], 'visualization': []}
         for ori_imgs, data in (track(inputs, description='Inference')
                                if self.show_progress else inputs):
-            preds = self.forward(data, **forward_kwargs)
+            import mmdet
+            if type(self.model) == mmdet.models.detectors.rtmdet.RTMDet:
+                preds = self.forward(data, **forward_kwargs)
+            else:
+                preds = self.model(data, **forward_kwargs)
             # for x in preds:
             #     for t in x:
             #         t = t.detach().numpy()
@@ -419,7 +424,7 @@ class DetInferencer(BaseInferencer):
             batch_img_metas = [
             data_samples.metainfo for data_samples in data['data_samples']
             ]
-            preds = predict_by_feat(*preds, batch_img_metas=batch_img_metas, rescale=rescale)
+            preds = self.predict_by_feat(*preds, batch_img_metas=batch_img_metas, rescale=self.rescale)
             
             preds = add_pred_to_datasample(data['data_samples'], preds)
             # return
