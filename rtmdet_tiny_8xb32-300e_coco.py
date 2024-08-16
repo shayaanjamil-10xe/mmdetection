@@ -50,7 +50,7 @@ custom_hooks = [
 data_root = '/teamspace/studios/aimet/COCO'
 dataset_type = 'CocoDataset'
 default_hooks = dict(
-    checkpoint=dict(interval=3, max_keep_ckpts=3, out_dir="/teamspace/studios/this_studio/mmdetection/rtm_weights", type='CheckpointHook', by_epoch=False),
+    checkpoint=dict(interval=50, max_keep_ckpts=3, out_dir="/teamspace/studios/this_studio/mmdetection/rtm_weights", type='CheckpointHook', by_epoch=False),
     logger=dict(interval=50, type='LoggerHook'),
     param_scheduler=dict(type='ParamSchedulerHook'),
     sampler_seed=dict(type='DistSamplerSeedHook'),
