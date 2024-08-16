@@ -98,7 +98,7 @@ class BaseDetector(BaseModel, metaclass=ABCMeta):
         # else:
         #     raise RuntimeError(f'Invalid mode "{mode}". '
         #                        'Only supports loss, predict and tensor mode')
-        return self._forward(inputs, data_samples)
+        return self.loss(inputs, data_samples)
     
 
     def new_forward(self,

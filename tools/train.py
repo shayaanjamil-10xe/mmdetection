@@ -121,3 +121,4 @@ if __name__ == '__main__':
     main()
 
 # python3 tools/train.py --config rtmdet_tiny_8xb32-300e_coco.py > output.log 2>&1
+# python3 tools/train.py --config rtmdet_tiny_8xb32-300e_coco.py --work-dir gpu16aug  > gpu_train_16aug.log 2>&1

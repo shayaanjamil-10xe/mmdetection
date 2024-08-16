@@ -74,9 +74,10 @@ class SingleStageDetector(BaseDetector):
         Returns:
             dict: A dictionary of loss components.
         """
+        print("STAGE DET FUNC CALLED")
         x = self.extract_feat(batch_inputs)
-        losses = self.bbox_head.loss(x, batch_data_samples)
-        return losses
+        # losses = self.bbox_head.loss(x, batch_data_samples)
+        return x
 
     def predict(self,
                 batch_inputs: Tensor,

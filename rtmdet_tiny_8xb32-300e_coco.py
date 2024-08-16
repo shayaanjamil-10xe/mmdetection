@@ -1,3 +1,4 @@
+experiment_name = 'rtm_det_gpu_16Aug_rangelearning'
 auto_scale_lr = dict(base_batch_size=1, enable=False)
 backend_args = None
 base_lr = 0.004
@@ -46,10 +47,10 @@ custom_hooks = [
         ],
         type='PipelineSwitchHook'),
 ]
-data_root = '/datasets/COCO'
+data_root = '/teamspace/studios/aimet/COCO'
 dataset_type = 'CocoDataset'
 default_hooks = dict(
-    checkpoint=dict(interval=10, max_keep_ckpts=3, type='CheckpointHook'),
+    checkpoint=dict(interval=3, max_keep_ckpts=3, out_dir="/teamspace/studios/this_studio/mmdetection/rtm_weights", type='CheckpointHook', by_epoch=False),
     logger=dict(interval=50, type='LoggerHook'),
     param_scheduler=dict(type='ParamSchedulerHook'),
     sampler_seed=dict(type='DistSamplerSeedHook'),
@@ -78,7 +79,7 @@ interval = 10
 load_from = None
 log_level = 'INFO'
 log_processor = dict(by_epoch=True, type='LogProcessor', window_size=50)
-max_epochs = 300
+max_epochs = 15
 model = dict(
     backbone=dict(
         act_cfg=dict(inplace=True, type='SiLU'),
@@ -184,7 +185,7 @@ test_dataloader = dict(
         ann_file='annotations/instances_val2017.json',
         backend_args=None,
         data_prefix=dict(img='val2017/'),
-        data_root='/datasets/COCO',
+        data_root='/teamspace/studios/aimet/COCO',
         pipeline=[
             dict(backend_args=None, type='LoadImageFromFile'),
             dict(keep_ratio=True, scale=(
@@ -220,7 +221,7 @@ test_dataloader = dict(
     persistent_workers=True,
     sampler=dict(shuffle=False, type='DefaultSampler'))
 test_evaluator = dict(
-    ann_file='/datasets/COCO/annotations/instances_val2017.json',
+    ann_file='/teamspace/studios/aimet/COCO/annotations/instances_val2017.json',
     backend_args=None,
     format_only=False,
     metric='bbox',
@@ -268,12 +269,12 @@ train_cfg = dict(
     val_interval=10)
 train_dataloader = dict(
     batch_sampler=None,
-    batch_size=1,
+    batch_size=16,
     dataset=dict(
         ann_file='annotations/instances_val2017.json',
         backend_args=None,
         data_prefix=dict(img='images/'),
-        data_root='/datasets/COCO/',
+        data_root='/teamspace/studios/aimet/COCO/',
         filter_cfg=dict(filter_empty_gt=True, min_size=32),
         pipeline=[
             dict(backend_args=None, type='LoadImageFromFile'),
@@ -486,12 +487,12 @@ tta_pipeline = [
 ]
 val_cfg = dict(type='ValLoop')
 val_dataloader = dict(
-    batch_size=1,
+    batch_size=8,
     dataset=dict(
         ann_file='annotations/instances_val2017.json',
         backend_args=None,
         data_prefix=dict(img='val2017/'),
-        data_root='/datasets/COCO/',
+        data_root='/teamspace/studios/aimet/COCO/',
         pipeline=[
             dict(backend_args=None, type='LoadImageFromFile'),
             dict(keep_ratio=True, scale=(
@@ -527,7 +528,7 @@ val_dataloader = dict(
     persistent_workers=True,
     sampler=dict(shuffle=False, type='DefaultSampler'))
 val_evaluator = dict(
-    ann_file='/datasets/COCO/annotations/instances_val2017.json',
+    ann_file='/teamspace/studios/aimet/COCO/annotations/instances_val2017.json',
     backend_args=None,
     format_only=False,
     metric='bbox',

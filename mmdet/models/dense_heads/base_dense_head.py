@@ -114,6 +114,7 @@ class BaseDenseHead(BaseModule, metaclass=ABCMeta):
         """
         outs = self(x)
 
+        #### TAKE THIS OUTSIDE INTO TRAIN_STEP
         outputs = unpack_gt_instances(batch_data_samples)
         (batch_gt_instances, batch_gt_instances_ignore,
          batch_img_metas) = outputs
@@ -121,7 +122,7 @@ class BaseDenseHead(BaseModule, metaclass=ABCMeta):
         loss_inputs = outs + (batch_gt_instances, batch_img_metas,
                               batch_gt_instances_ignore)
         losses = self.loss_by_feat(*loss_inputs)
-        return losses
+        return outs
 
     @abstractmethod
     def loss_by_feat(self, **kwargs) -> dict:
