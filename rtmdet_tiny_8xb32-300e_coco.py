@@ -46,7 +46,7 @@ custom_hooks = [
         ],
         type='PipelineSwitchHook'),
 ]
-data_root = '/datasets/COCO'
+data_root = 'data/coco/'
 dataset_type = 'CocoDataset'
 default_hooks = dict(
     checkpoint=dict(interval=10, max_keep_ckpts=3, type='CheckpointHook'),
@@ -184,7 +184,7 @@ test_dataloader = dict(
         ann_file='annotations/instances_val2017.json',
         backend_args=None,
         data_prefix=dict(img='val2017/'),
-        data_root='/datasets/COCO',
+        data_root='data/coco/',
         pipeline=[
             dict(backend_args=None, type='LoadImageFromFile'),
             dict(keep_ratio=True, scale=(
@@ -220,7 +220,7 @@ test_dataloader = dict(
     persistent_workers=True,
     sampler=dict(shuffle=False, type='DefaultSampler'))
 test_evaluator = dict(
-    ann_file='/datasets/COCO/annotations/instances_val2017.json',
+    ann_file='data/coco/annotations/instances_val2017.json',
     backend_args=None,
     format_only=False,
     metric='bbox',
@@ -229,7 +229,6 @@ test_evaluator = dict(
         1,
         10,
     ),
-    outfile_prefix='/home/shayaan/Desktop/aimet/my_mmdet/pred_results/test',
     type='CocoMetric')
 test_pipeline = [
     dict(backend_args=None, type='LoadImageFromFile'),
@@ -270,10 +269,10 @@ train_dataloader = dict(
     batch_sampler=None,
     batch_size=32,
     dataset=dict(
-        ann_file='annotations/instances_val2017.json',
+        ann_file='annotations/instances_train2017.json',
         backend_args=None,
         data_prefix=dict(img='train2017/'),
-        data_root='/datasets/COCO/',
+        data_root='data/coco/',
         filter_cfg=dict(filter_empty_gt=True, min_size=32),
         pipeline=[
             dict(backend_args=None, type='LoadImageFromFile'),
@@ -491,7 +490,7 @@ val_dataloader = dict(
         ann_file='annotations/instances_val2017.json',
         backend_args=None,
         data_prefix=dict(img='val2017/'),
-        data_root='/datasets/COCO/',
+        data_root='data/coco/',
         pipeline=[
             dict(backend_args=None, type='LoadImageFromFile'),
             dict(keep_ratio=True, scale=(
@@ -527,7 +526,7 @@ val_dataloader = dict(
     persistent_workers=True,
     sampler=dict(shuffle=False, type='DefaultSampler'))
 val_evaluator = dict(
-    ann_file='/datasets/COCO/annotations/instances_val2017.json',
+    ann_file='data/coco/annotations/instances_val2017.json',
     backend_args=None,
     format_only=False,
     metric='bbox',

@@ -1,0 +1,28 @@
+# running docker container
+docker run --gpus all -it --network=host -v /teamspace:/teamspace \
+    --entrypoint /bin/bash -w /teamspace/studios/this_studio/aimet \
+    --hostname aimet --name aimet_jupyter -d alder_aimet:1.0
+
+# aimet docker image for torch gpu
+-- artifacts.codelinaro.org/codelinaro-aimet/aimet-dev:1.33.0.torch-gpu
+
+# list stopped docker containers
+docker ps --filter "status=exited"
+
+#pip install dependencies
+    pip install aimet-torch openmim && 
+    mim install mmengine &&
+    mim install "mmcv>=2.0.0" &&
+    pip install -v -e .
+
+# convert ipynb to py file
+jupyter nbconvert --to script
+
+# run py file and log to output.log
+python3 autoquant_det_infer.py > output.log 2>&1
+
+jupyter nbconvert --to script autoquant_det_infer.ipynb && python3 autoquant_det_infer.py > output.log 2>&1
+
+cp auto_quant.py /usr/local/lib/python3.10/dist-packages/aimet_torch/
+cp ../../../auto_quant.py /usr/local/lib/python3.10/dist-packages/aimet_torch/
+
