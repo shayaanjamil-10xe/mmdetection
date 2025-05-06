@@ -1,0 +1,3817 @@
+{
+    "activation_encodings": {
+        "backbone.stage1.0.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 105.90702819824219,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.4153216779232025
+                }
+            }
+        },
+        "backbone.stage1.0.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage1.0.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 108.36092376708984,
+                    "min": -87.61096954345703,
+                    "offset": -114,
+                    "scale": 0.768517255783081
+                }
+            }
+        },
+        "backbone.stage1.1.attention.act": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage1.1.attention.fc": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 3.810995101928711,
+                    "min": -3.180398941040039,
+                    "offset": -116,
+                    "scale": 0.02741723135113716
+                }
+            }
+        },
+        "backbone.stage1.1.attention.global_avgpool": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 3.16905015707016,
+                    "min": -0.34446197748184204,
+                    "offset": -25,
+                    "scale": 0.01377847883850336
+                }
+            }
+        },
+        "backbone.stage1.1.attention.module_mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 3.055086374282837,
+                    "min": -0.5516128540039062,
+                    "offset": -39,
+                    "scale": 0.014143918640911579
+                }
+            }
+        },
+        "backbone.stage1.1.blocks.0.conv1.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 14.194615989923477,
+                    "min": -0.22620901465415955,
+                    "offset": -4,
+                    "scale": 0.056552253663539886
+                }
+            }
+        },
+        "backbone.stage1.1.blocks.0.conv1.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage1.1.blocks.0.conv1.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 2.6883902549743652,
+                    "min": -4.928715229034424,
+                    "offset": -165,
+                    "scale": 0.029871001839637756
+                }
+            }
+        },
+        "backbone.stage1.1.blocks.0.conv2.depthwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 25.687752410769463,
+                    "min": -0.20306523144245148,
+                    "offset": -2,
+                    "scale": 0.10153261572122574
+                }
+            }
+        },
+        "backbone.stage1.1.blocks.0.conv2.depthwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage1.1.blocks.0.conv2.depthwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 13.083888292312622,
+                    "min": -3.2709720134735107,
+                    "offset": -51,
+                    "scale": 0.06413670629262924
+                }
+            }
+        },
+        "backbone.stage1.1.blocks.0.conv2.pointwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 8.341388463973999,
+                    "min": -0.2354423999786377,
+                    "offset": -7,
+                    "scale": 0.03363462910056114
+                }
+            }
+        },
+        "backbone.stage1.1.blocks.0.conv2.pointwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9980316162109375,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913849592208862
+                }
+            }
+        },
+        "backbone.stage1.1.blocks.0.conv2.pointwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 8.084300994873047,
+                    "min": -8.021141052246094,
+                    "offset": -127,
+                    "scale": 0.06315859407186508
+                }
+            }
+        },
+        "backbone.stage1.1.blocks.0.module_add": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 8.442489624023438,
+                    "min": -0.5276556015014648,
+                    "offset": -15,
+                    "scale": 0.035177040845155716
+                }
+            }
+        },
+        "backbone.stage1.1.final_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 7.253555238246918,
+                    "min": -0.23493295907974243,
+                    "offset": -8,
+                    "scale": 0.029366619884967804
+                }
+            }
+        },
+        "backbone.stage1.1.final_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9979853630065918,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913667984306812
+                }
+            }
+        },
+        "backbone.stage1.1.final_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.7281444072723389,
+                    "min": -2.103827953338623,
+                    "offset": -140,
+                    "scale": 0.015027342364192009
+                }
+            }
+        },
+        "backbone.stage1.1.main_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 5.132848501205444,
+                    "min": -0.25347399711608887,
+                    "offset": -12,
+                    "scale": 0.021122833713889122
+                }
+            }
+        },
+        "backbone.stage1.1.main_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9954172372817993,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003903596894815564
+                }
+            }
+        },
+        "backbone.stage1.1.main_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 73.25443267822266,
+                    "min": -72.68212127685547,
+                    "offset": -127,
+                    "scale": 0.5723001956939697
+                }
+            }
+        },
+        "backbone.stage1.1.module_cat": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 14.636770606040955,
+                    "min": -0.5354915857315063,
+                    "offset": -9,
+                    "scale": 0.059499066323041916
+                }
+            }
+        },
+        "backbone.stage1.1.short_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 14.767786741256714,
+                    "min": -0.23534321784973145,
+                    "offset": -4,
+                    "scale": 0.05883580446243286
+                }
+            }
+        },
+        "backbone.stage1.1.short_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage1.1.short_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 76.06403350830078,
+                    "min": -75.46977996826172,
+                    "offset": -127,
+                    "scale": 0.5942502617835999
+                }
+            }
+        },
+        "backbone.stage2.0.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 7.226576507091522,
+                    "min": -0.26438695192337036,
+                    "offset": -9,
+                    "scale": 0.029376327991485596
+                }
+            }
+        },
+        "backbone.stage2.0.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9979594349861145,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913566470146179
+                }
+            }
+        },
+        "backbone.stage2.0.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 12.299009323120117,
+                    "min": -22.548181533813477,
+                    "offset": -165,
+                    "scale": 0.13665564358234406
+                }
+            }
+        },
+        "backbone.stage2.1.attention.act": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage2.1.attention.fc": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 4.702763557434082,
+                    "min": -5.046868324279785,
+                    "offset": -132,
+                    "scale": 0.03823385015130043
+                }
+            }
+        },
+        "backbone.stage2.1.attention.global_avgpool": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 2.9463776350021362,
+                    "min": -0.40775763988494873,
+                    "offset": -31,
+                    "scale": 0.013153471983969212
+                }
+            }
+        },
+        "backbone.stage2.1.attention.module_mul_1": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 3.0584585070610046,
+                    "min": -0.5355826020240784,
+                    "offset": -38,
+                    "scale": 0.014094279147684574
+                }
+            }
+        },
+        "backbone.stage2.1.blocks.0.conv1.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 10.75799086689949,
+                    "min": -0.2592286765575409,
+                    "offset": -6,
+                    "scale": 0.04320478066802025
+                }
+            }
+        },
+        "backbone.stage2.1.blocks.0.conv1.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9980454444885254,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.00391390360891819
+                }
+            }
+        },
+        "backbone.stage2.1.blocks.0.conv1.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 3.094280242919922,
+                    "min": -5.672846794128418,
+                    "offset": -165,
+                    "scale": 0.03438089042901993
+                }
+            }
+        },
+        "backbone.stage2.1.blocks.0.conv2.depthwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 13.563242092728615,
+                    "min": -0.2161472886800766,
+                    "offset": -4,
+                    "scale": 0.05403682217001915
+                }
+            }
+        },
+        "backbone.stage2.1.blocks.0.conv2.depthwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9980463981628418,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0039139073342084885
+                }
+            }
+        },
+        "backbone.stage2.1.blocks.0.conv2.depthwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 16.49187469482422,
+                    "min": -5.759067535400391,
+                    "offset": -66,
+                    "scale": 0.08725859969854355
+                }
+            }
+        },
+        "backbone.stage2.1.blocks.0.conv2.pointwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 7.807197719812393,
+                    "min": -0.25286468863487244,
+                    "offset": -8,
+                    "scale": 0.031608086079359055
+                }
+            }
+        },
+        "backbone.stage2.1.blocks.0.conv2.pointwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9980198740959167,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913803491741419
+                }
+            }
+        },
+        "backbone.stage2.1.blocks.0.conv2.pointwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 7.074079513549805,
+                    "min": -8.611922264099121,
+                    "offset": -140,
+                    "scale": 0.06151373311877251
+                }
+            }
+        },
+        "backbone.stage2.1.blocks.0.module_add_1": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 7.525179803371429,
+                    "min": -0.5375128388404846,
+                    "offset": -17,
+                    "scale": 0.031618401408195496
+                }
+            }
+        },
+        "backbone.stage2.1.final_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 8.716204032301903,
+                    "min": -0.24602188169956207,
+                    "offset": -7,
+                    "scale": 0.03514598309993744
+                }
+            }
+        },
+        "backbone.stage2.1.final_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9980394840240479,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913880325853825
+                }
+            }
+        },
+        "backbone.stage2.1.final_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.9810343980789185,
+                    "min": -1.6016875505447388,
+                    "offset": -114,
+                    "scale": 0.014049890451133251
+                }
+            }
+        },
+        "backbone.stage2.1.main_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 2.509174942970276,
+                    "min": -0.27273643016815186,
+                    "offset": -25,
+                    "scale": 0.010909456759691238
+                }
+            }
+        },
+        "backbone.stage2.1.main_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9350684881210327,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0036669352557510138
+                }
+            }
+        },
+        "backbone.stage2.1.main_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 7.40064811706543,
+                    "min": -4.933765411376953,
+                    "offset": -102,
+                    "scale": 0.048370249569416046
+                }
+            }
+        },
+        "backbone.stage2.1.module_cat_1": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 27.596040546894073,
+                    "min": -0.43977755308151245,
+                    "offset": -4,
+                    "scale": 0.10994438827037811
+                }
+            }
+        },
+        "backbone.stage2.1.short_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 28.553429290652275,
+                    "min": -0.22571881115436554,
+                    "offset": -2,
+                    "scale": 0.11285940557718277
+                }
+            }
+        },
+        "backbone.stage2.1.short_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage2.1.short_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 4.213896751403809,
+                    "min": -6.320845603942871,
+                    "offset": -153,
+                    "scale": 0.04131271690130234
+                }
+            }
+        },
+        "backbone.stage3.0.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 8.133066177368164,
+                    "min": -0.26341915130615234,
+                    "offset": -8,
+                    "scale": 0.03292739391326904
+                }
+            }
+        },
+        "backbone.stage3.0.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9980127811431885,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.00391377555206418
+                }
+            }
+        },
+        "backbone.stage3.0.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 14.047269821166992,
+                    "min": -25.753328323364258,
+                    "offset": -165,
+                    "scale": 0.15608078241348267
+                }
+            }
+        },
+        "backbone.stage3.1.attention.act": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage3.1.attention.fc": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 3.776144504547119,
+                    "min": -3.304126262664795,
+                    "offset": -119,
+                    "scale": 0.02776576764881611
+                }
+            }
+        },
+        "backbone.stage3.1.attention.global_avgpool": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.8065708577632904,
+                    "min": -0.44062700867652893,
+                    "offset": -50,
+                    "scale": 0.008812540210783482
+                }
+            }
+        },
+        "backbone.stage3.1.attention.module_mul_2": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 3.5375893115997314,
+                    "min": -0.5442445278167725,
+                    "offset": -34,
+                    "scale": 0.0160071924328804
+                }
+            }
+        },
+        "backbone.stage3.1.blocks.0.conv1.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 8.097016707062721,
+                    "min": -0.22854481637477875,
+                    "offset": -7,
+                    "scale": 0.03264926001429558
+                }
+            }
+        },
+        "backbone.stage3.1.blocks.0.conv1.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9979962706565857,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913710825145245
+                }
+            }
+        },
+        "backbone.stage3.1.blocks.0.conv1.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 6.690616130828857,
+                    "min": -6.638346195220947,
+                    "offset": -127,
+                    "scale": 0.05227044224739075
+                }
+            }
+        },
+        "backbone.stage3.1.blocks.0.conv2.depthwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 19.948410600423813,
+                    "min": -0.31790295243263245,
+                    "offset": -4,
+                    "scale": 0.07947573810815811
+                }
+            }
+        },
+        "backbone.stage3.1.blocks.0.conv2.depthwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage3.1.blocks.0.conv2.depthwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 6.3161516189575195,
+                    "min": -9.474227905273438,
+                    "offset": -153,
+                    "scale": 0.061923056840896606
+                }
+            }
+        },
+        "backbone.stage3.1.blocks.0.conv2.pointwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 9.005294978618622,
+                    "min": -0.21699506044387817,
+                    "offset": -6,
+                    "scale": 0.03616584464907646
+                }
+            }
+        },
+        "backbone.stage3.1.blocks.0.conv2.pointwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9980411529541016,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913886845111847
+                }
+            }
+        },
+        "backbone.stage3.1.blocks.0.conv2.pointwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 9.131147384643555,
+                    "min": -13.696722030639648,
+                    "offset": -153,
+                    "scale": 0.08952105790376663
+                }
+            }
+        },
+        "backbone.stage3.1.blocks.0.module_add_2": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 9.474952220916748,
+                    "min": -0.5089850425720215,
+                    "offset": -13,
+                    "scale": 0.03915269672870636
+                }
+            }
+        },
+        "backbone.stage3.1.final_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 12.77049571275711,
+                    "min": -0.2554098963737488,
+                    "offset": -5,
+                    "scale": 0.051081981509923935
+                }
+            }
+        },
+        "backbone.stage3.1.final_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9980467557907104,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.00391390873119235
+                }
+            }
+        },
+        "backbone.stage3.1.final_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 2.7549381256103516,
+                    "min": -2.733415126800537,
+                    "offset": -127,
+                    "scale": 0.02152295410633087
+                }
+            }
+        },
+        "backbone.stage3.1.main_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 3.7756280303001404,
+                    "min": -0.2696877121925354,
+                    "offset": -17,
+                    "scale": 0.01586398296058178
+                }
+            }
+        },
+        "backbone.stage3.1.main_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9560360908508301,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0037491610273718834
+                }
+            }
+        },
+        "backbone.stage3.1.main_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 4.682805061340332,
+                    "min": -5.700806617736816,
+                    "offset": -140,
+                    "scale": 0.04072004556655884
+                }
+            }
+        },
+        "backbone.stage3.1.module_cat_2": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 20.754243791103363,
+                    "min": -0.4150848984718323,
+                    "offset": -5,
+                    "scale": 0.08301697671413422
+                }
+            }
+        },
+        "backbone.stage3.1.short_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 26.89239427447319,
+                    "min": -0.2125881016254425,
+                    "offset": -2,
+                    "scale": 0.10629405081272125
+                }
+            }
+        },
+        "backbone.stage3.1.short_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage3.1.short_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 5.103861331939697,
+                    "min": -5.0639872550964355,
+                    "offset": -127,
+                    "scale": 0.039873916655778885
+                }
+            }
+        },
+        "backbone.stage4.0.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 8.965195626020432,
+                    "min": -0.2530498802661896,
+                    "offset": -7,
+                    "scale": 0.03614998236298561
+                }
+            }
+        },
+        "backbone.stage4.0.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9980409145355225,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913885913789272
+                }
+            }
+        },
+        "backbone.stage4.0.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 26.20439338684082,
+                    "min": -22.216768264770508,
+                    "offset": -117,
+                    "scale": 0.1898869127035141
+                }
+            }
+        },
+        "backbone.stage4.1.conv1.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 18.291159242391586,
+                    "min": -0.2177518904209137,
+                    "offset": -3,
+                    "scale": 0.07258396595716476
+                }
+            }
+        },
+        "backbone.stage4.1.conv1.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage4.1.conv1.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 6.222089767456055,
+                    "min": -9.333135604858398,
+                    "offset": -153,
+                    "scale": 0.06100088357925415
+                }
+            }
+        },
+        "backbone.stage4.1.conv2.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 7.2974816262722015,
+                    "min": -0.2669810354709625,
+                    "offset": -9,
+                    "scale": 0.02966455928981304
+                }
+            }
+        },
+        "backbone.stage4.1.conv2.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9977627992630005,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003912795335054398
+                }
+            }
+        },
+        "backbone.stage4.1.conv2.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 93.53931427001953,
+                    "min": -75.6275405883789,
+                    "offset": -114,
+                    "scale": 0.6633994579315186
+                }
+            }
+        },
+        "backbone.stage4.1.module_cat_3": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 19.41963742673397,
+                    "min": -0.2311861664056778,
+                    "offset": -3,
+                    "scale": 0.07706205546855927
+                }
+            }
+        },
+        "backbone.stage4.1.poolings.0": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 18.961095809936523,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.07435724139213562
+                }
+            }
+        },
+        "backbone.stage4.1.poolings.1": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 19.17140769958496,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0751819908618927
+                }
+            }
+        },
+        "backbone.stage4.1.poolings.2": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 19.057830810546875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.074736587703228
+                }
+            }
+        },
+        "backbone.stage4.2.attention.act": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage4.2.attention.fc": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 10.953329086303711,
+                    "min": -8.85588264465332,
+                    "offset": -114,
+                    "scale": 0.07768318057060242
+                }
+            }
+        },
+        "backbone.stage4.2.attention.global_avgpool": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 8.356957390904427,
+                    "min": -0.23588185012340546,
+                    "offset": -7,
+                    "scale": 0.03369740769267082
+                }
+            }
+        },
+        "backbone.stage4.2.attention.module_mul_3": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 17.3298921585083,
+                    "min": -0.27617359161376953,
+                    "offset": -4,
+                    "scale": 0.06904339790344238
+                }
+            }
+        },
+        "backbone.stage4.2.blocks.0.conv1.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 33.732477962970734,
+                    "min": -0.2666599154472351,
+                    "offset": -2,
+                    "scale": 0.13332995772361755
+                }
+            }
+        },
+        "backbone.stage4.2.blocks.0.conv1.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage4.2.blocks.0.conv1.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 25.132339477539062,
+                    "min": -24.935993194580078,
+                    "offset": -127,
+                    "scale": 0.19634640216827393
+                }
+            }
+        },
+        "backbone.stage4.2.blocks.0.conv2.depthwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 30.11918629705906,
+                    "min": -0.23809634149074554,
+                    "offset": -2,
+                    "scale": 0.11904817074537277
+                }
+            }
+        },
+        "backbone.stage4.2.blocks.0.conv2.depthwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage4.2.blocks.0.conv2.depthwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 10.429231643676758,
+                    "min": -31.124738693237305,
+                    "offset": -191,
+                    "scale": 0.16295674443244934
+                }
+            }
+        },
+        "backbone.stage4.2.blocks.0.conv2.pointwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 25.72296142578125,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.10087435692548752
+                }
+            }
+        },
+        "backbone.stage4.2.blocks.0.conv2.pointwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage4.2.blocks.0.conv2.pointwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 20.30610942840576,
+                    "min": -13.537407875061035,
+                    "offset": -102,
+                    "scale": 0.13271968066692352
+                }
+            }
+        },
+        "backbone.stage4.2.final_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 14.66409718990326,
+                    "min": -0.17457258701324463,
+                    "offset": -3,
+                    "scale": 0.05819086357951164
+                }
+            }
+        },
+        "backbone.stage4.2.final_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stage4.2.final_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 3.8628787994384766,
+                    "min": -4.702634811401367,
+                    "offset": -140,
+                    "scale": 0.033590249717235565
+                }
+            }
+        },
+        "backbone.stage4.2.main_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 12.648704946041107,
+                    "min": -0.25297409296035767,
+                    "offset": -5,
+                    "scale": 0.05059482157230377
+                }
+            }
+        },
+        "backbone.stage4.2.main_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9980466365814209,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913908265531063
+                }
+            }
+        },
+        "backbone.stage4.2.main_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 5.868528366088867,
+                    "min": -4.744768142700195,
+                    "offset": -114,
+                    "scale": 0.04162077233195305
+                }
+            }
+        },
+        "backbone.stage4.2.module_cat_4": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 25.72296142578125,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.10087435692548752
+                }
+            }
+        },
+        "backbone.stage4.2.short_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 10.61018431186676,
+                    "min": -0.2556670904159546,
+                    "offset": -6,
+                    "scale": 0.04261118173599243
+                }
+            }
+        },
+        "backbone.stage4.2.short_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9980461597442627,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913906402885914
+                }
+            }
+        },
+        "backbone.stage4.2.short_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 5.4724767208099365,
+                    "min": -3.648317575454712,
+                    "offset": -102,
+                    "scale": 0.0357678197324276
+                }
+            }
+        },
+        "backbone.stem.0.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 18.08060297369957,
+                    "min": -0.2881371080875397,
+                    "offset": -4,
+                    "scale": 0.07203427702188492
+                }
+            }
+        },
+        "backbone.stem.0.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9980469346046448,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909662514925
+                }
+            }
+        },
+        "backbone.stem.0.conv": {
+            "input": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 2.6391501426696777,
+                    "min": -2.1001687049865723,
+                    "offset": -113,
+                    "scale": 0.0185855645686388
+                }
+            },
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 2.991079807281494,
+                    "min": -3.64131498336792,
+                    "offset": -140,
+                    "scale": 0.026009391993284225
+                }
+            }
+        },
+        "backbone.stem.1.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 38.48674489557743,
+                    "min": -0.15152262151241302,
+                    "offset": -1,
+                    "scale": 0.15152262151241302
+                }
+            }
+        },
+        "backbone.stem.1.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stem.1.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 11.885397911071777,
+                    "min": -11.7925443649292,
+                    "offset": -127,
+                    "scale": 0.09285467863082886
+                }
+            }
+        },
+        "backbone.stem.2.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 87.78719329833984,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.34426349401474
+                }
+            }
+        },
+        "backbone.stem.2.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.998046875,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003913909196853638
+                }
+            }
+        },
+        "backbone.stem.2.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 31.706661224365234,
+                    "min": -47.559993743896484,
+                    "offset": -153,
+                    "scale": 0.3108496367931366
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.blocks.0.conv1.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.002196078421548009,
+                    "min": -0.0021789215970784426,
+                    "offset": -127,
+                    "scale": 1.715686266834382e-05
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.blocks.0.conv1.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5018149018287659,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.001967901596799493
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.blocks.0.conv1.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.004547900520265102,
+                    "min": -0.004512370564043522,
+                    "offset": -127,
+                    "scale": 3.553047645254992e-05
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.blocks.0.conv2.depthwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.001131853205151856,
+                    "min": -0.0018436372047290206,
+                    "offset": -158,
+                    "scale": 1.1668589650071226e-05
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.blocks.0.conv2.depthwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5006203055381775,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0019632168114185333
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.blocks.0.conv2.depthwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.0016156386118382215,
+                    "min": -0.003734852420166135,
+                    "offset": -178,
+                    "scale": 2.098231743730139e-05
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.blocks.0.conv2.pointwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.00019206074648536742,
+                    "min": -0.000312841177219525,
+                    "offset": -158,
+                    "scale": 1.980007482416113e-06
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.blocks.0.conv2.pointwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5001316666603088,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.001961300615221262
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.blocks.0.conv2.pointwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.00037831603549420834,
+                    "min": -0.0006265859119594097,
+                    "offset": -159,
+                    "scale": 3.940791884815553e-06
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.final_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.004838235210627317,
+                    "min": -0.0039117648266255856,
+                    "offset": -114,
+                    "scale": 3.431372533668764e-05
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.final_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5019974112510681,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.001968617318198085
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.final_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.004141404293477535,
+                    "min": -0.0041090501472353935,
+                    "offset": -127,
+                    "scale": 3.235472468077205e-05
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.main_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.010531755164265633,
+                    "min": -0.010449474677443504,
+                    "offset": -127,
+                    "scale": 8.227932994486764e-05
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.main_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5106666684150696,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0020026143174618483
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.main_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.018448282033205032,
+                    "min": -0.01830415427684784,
+                    "offset": -127,
+                    "scale": 0.00014412720338441432
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.module_cat_10": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.014068509452044964,
+                    "min": -0.013958600349724293,
+                    "offset": -127,
+                    "scale": 0.0001099102373700589
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.short_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.009479757398366928,
+                    "min": -0.011540574952960014,
+                    "offset": -140,
+                    "scale": 8.243267802754417e-05
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.short_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5096057057380676,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0019984536338597536
+                }
+            }
+        },
+        "neck.bottom_up_blocks.0.short_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.018985331058502197,
+                    "min": -0.023112576454877853,
+                    "offset": -140,
+                    "scale": 0.00016508983389940113
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.blocks.0.conv1.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.050693441182374954,
+                    "min": -0.040986184030771255,
+                    "offset": -114,
+                    "scale": 0.00035952794132754207
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.blocks.0.conv1.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5146328210830688,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.002018167870119214
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.blocks.0.conv1.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.09209619462490082,
+                    "min": -0.09137669205665588,
+                    "offset": -127,
+                    "scale": 0.0007195015205070376
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.blocks.0.conv2.depthwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.017323026433587074,
+                    "min": -0.01718769036233425,
+                    "offset": -127,
+                    "scale": 0.00013533614401239902
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.blocks.0.conv2.depthwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5115492939949036,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0020060755778104067
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.blocks.0.conv2.depthwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.03152158483862877,
+                    "min": -0.031275320798158646,
+                    "offset": -127,
+                    "scale": 0.00024626238155178726
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.blocks.0.conv2.pointwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.0033133989199995995,
+                    "min": -0.0032875132746994495,
+                    "offset": -127,
+                    "scale": 2.5885930881486274e-05
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.blocks.0.conv2.pointwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5027012228965759,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.001971377292647958
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.blocks.0.conv2.pointwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.006621651817113161,
+                    "min": -0.006569919642060995,
+                    "offset": -127,
+                    "scale": 5.1731651183217764e-05
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.final_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.05267280340194702,
+                    "min": -0.042586520314216614,
+                    "offset": -114,
+                    "scale": 0.00037356597022153437
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.final_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5116666555404663,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0020065358839929104
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.final_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.09573480486869812,
+                    "min": -0.09498688578605652,
+                    "offset": -127,
+                    "scale": 0.000747928221244365
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.main_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.2717423439025879,
+                    "min": -0.14569318294525146,
+                    "offset": -89,
+                    "scale": 0.0016370021039620042
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.main_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.6021710634231567,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0023614552337676287
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.main_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.4416055977344513,
+                    "min": -0.3570428192615509,
+                    "offset": -114,
+                    "scale": 0.003131954465061426
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.module_cat_12": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.2585010528564453,
+                    "min": -0.2408759891986847,
+                    "offset": -123,
+                    "scale": 0.0019583413377404213
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.short_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.2585010528564453,
+                    "min": -0.2408759891986847,
+                    "offset": -123,
+                    "scale": 0.0019583413377404213
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.short_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5919704437255859,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.002321452833712101
+                }
+            }
+        },
+        "neck.bottom_up_blocks.1.short_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.4023750424385071,
+                    "min": -0.399231493473053,
+                    "offset": -127,
+                    "scale": 0.0031435550190508366
+                }
+            }
+        },
+        "neck.downsamples.0.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.03238905221223831,
+                    "min": -0.03213600814342499,
+                    "offset": -127,
+                    "scale": 0.00025303944130428135
+                }
+            }
+        },
+        "neck.downsamples.0.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5258826017379761,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0020622846204787493
+                }
+            }
+        },
+        "neck.downsamples.0.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.06472814083099365,
+                    "min": -0.06422245502471924,
+                    "offset": -127,
+                    "scale": 0.0005056886002421379
+                }
+            }
+        },
+        "neck.downsamples.1.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.0011272491537965834,
+                    "min": -0.0007036332390271127,
+                    "offset": -98,
+                    "scale": 7.179930889833486e-06
+                }
+            }
+        },
+        "neck.downsamples.1.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5003495812416077,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0019621553365141153
+                }
+            }
+        },
+        "neck.downsamples.1.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.0022084584925323725,
+                    "min": -0.0014484047424048185,
+                    "offset": -101,
+                    "scale": 1.4340640518639702e-05
+                }
+            }
+        },
+        "neck.module_cat_11": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.2853181958198547,
+                    "min": -0.2680284380912781,
+                    "offset": -44,
+                    "scale": 0.006091555580496788
+                }
+            }
+        },
+        "neck.module_cat_5": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 12.100866720080376,
+                    "min": -0.24201734364032745,
+                    "offset": -5,
+                    "scale": 0.04840346798300743
+                }
+            }
+        },
+        "neck.module_cat_7": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 7.627655267715454,
+                    "min": -0.24704957008361816,
+                    "offset": -8,
+                    "scale": 0.03088119626045227
+                }
+            }
+        },
+        "neck.module_cat_9": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.038027845323085785,
+                    "min": -0.04629477113485336,
+                    "offset": -140,
+                    "scale": 0.000330676935845986
+                }
+            }
+        },
+        "neck.module_upsample_1": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.038027845323085785,
+                    "min": -0.04629477113485336,
+                    "offset": -140,
+                    "scale": 0.000330676935845986
+                }
+            }
+        },
+        "neck.out_convs.0.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.03301868587732315,
+                    "min": -0.032760731875896454,
+                    "offset": -127,
+                    "scale": 0.00025795851252041757
+                }
+            }
+        },
+        "neck.out_convs.0.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.528023362159729,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.002070679794996977
+                }
+            }
+        },
+        "neck.out_convs.0.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.06623544543981552,
+                    "min": -0.06571797281503677,
+                    "offset": -127,
+                    "scale": 0.0005174643592908978
+                }
+            }
+        },
+        "neck.out_convs.1.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.0004796232678927481,
+                    "min": -0.0007434160797856748,
+                    "offset": -155,
+                    "scale": 4.796232587978011e-06
+                }
+            }
+        },
+        "neck.out_convs.1.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5003525614738464,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.001962166978046298
+                }
+            }
+        },
+        "neck.out_convs.1.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.0008455882780253887,
+                    "min": -0.0010294117964804173,
+                    "offset": -140,
+                    "scale": 7.3529413384676445e-06
+                }
+            }
+        },
+        "neck.out_convs.2.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.011331292800605297,
+                    "min": -0.009161471389234066,
+                    "offset": -114,
+                    "scale": 8.036378130782396e-05
+                }
+            }
+        },
+        "neck.out_convs.2.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5104928016662598,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0020019325893372297
+                }
+            }
+        },
+        "neck.out_convs.2.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.02255421131849289,
+                    "min": -0.01823532208800316,
+                    "offset": -114,
+                    "scale": 0.00015995895955711603
+                }
+            }
+        },
+        "neck.reduce_layers.0.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.2853181958198547,
+                    "min": -0.2680284380912781,
+                    "offset": -44,
+                    "scale": 0.006091555580496788
+                }
+            }
+        },
+        "neck.reduce_layers.0.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.8572912812232971,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0033619266469031572
+                }
+            }
+        },
+        "neck.reduce_layers.0.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.4691917896270752,
+                    "min": -2.5163819789886475,
+                    "offset": -161,
+                    "scale": 0.01562970131635666
+                }
+            }
+        },
+        "neck.reduce_layers.1.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.038027845323085785,
+                    "min": -0.04629477113485336,
+                    "offset": -140,
+                    "scale": 0.000330676935845986
+                }
+            }
+        },
+        "neck.reduce_layers.1.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5161293745040894,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.002024036832153797
+                }
+            }
+        },
+        "neck.reduce_layers.1.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.07631289958953857,
+                    "min": -0.09290266036987305,
+                    "offset": -140,
+                    "scale": 0.0006635904428549111
+                }
+            }
+        },
+        "neck.top_down_blocks.0.blocks.0.conv1.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.12350036203861237,
+                    "min": -0.16279594600200653,
+                    "offset": -145,
+                    "scale": 0.0011227306677028537
+                }
+            }
+        },
+        "neck.top_down_blocks.0.blocks.0.conv1.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5704494118690491,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.00223705661483109
+                }
+            }
+        },
+        "neck.top_down_blocks.0.blocks.0.conv1.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.2659740746021271,
+                    "min": -0.2638961374759674,
+                    "offset": -127,
+                    "scale": 0.0020779224578291178
+                }
+            }
+        },
+        "neck.top_down_blocks.0.blocks.0.conv2.depthwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.05042668431997299,
+                    "min": -0.0407705083489418,
+                    "offset": -114,
+                    "scale": 0.0003576360468287021
+                }
+            }
+        },
+        "neck.top_down_blocks.0.blocks.0.conv2.depthwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5355658531188965,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.002100258134305477
+                }
+            }
+        },
+        "neck.top_down_blocks.0.blocks.0.conv2.depthwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.10989084839820862,
+                    "min": -0.10903231799602509,
+                    "offset": -127,
+                    "scale": 0.0008585221949033439
+                }
+            }
+        },
+        "neck.top_down_blocks.0.blocks.0.conv2.pointwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.010112990625202656,
+                    "min": -0.010033982805907726,
+                    "offset": -127,
+                    "scale": 7.900773925939575e-05
+                }
+            }
+        },
+        "neck.top_down_blocks.0.blocks.0.conv2.pointwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5072499513626099,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0019892153795808554
+                }
+            }
+        },
+        "neck.top_down_blocks.0.blocks.0.conv2.pointwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.018339281901717186,
+                    "min": -0.018196003511548042,
+                    "offset": -127,
+                    "scale": 0.0001432756253052503
+                }
+            }
+        },
+        "neck.top_down_blocks.0.final_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.17419423162937164,
+                    "min": -0.11612950265407562,
+                    "offset": -102,
+                    "scale": 0.0011385245015844703
+                }
+            }
+        },
+        "neck.top_down_blocks.0.final_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5794782042503357,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0022724636364728212
+                }
+            }
+        },
+        "neck.top_down_blocks.0.final_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.2927796542644501,
+                    "min": -0.29049232602119446,
+                    "offset": -127,
+                    "scale": 0.002287341048941016
+                }
+            }
+        },
+        "neck.top_down_blocks.0.main_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9120824635028839,
+                    "min": -0.27455541491508484,
+                    "offset": -59,
+                    "scale": 0.004653481766581535
+                }
+            }
+        },
+        "neck.top_down_blocks.0.main_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.7347342371940613,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.00288131064735353
+                }
+            }
+        },
+        "neck.top_down_blocks.0.main_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.1979538202285767,
+                    "min": -1.188594937324524,
+                    "offset": -127,
+                    "scale": 0.00935901515185833
+                }
+            }
+        },
+        "neck.top_down_blocks.0.module_cat_6": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.7721679508686066,
+                    "min": -0.2533676326274872,
+                    "offset": -63,
+                    "scale": 0.004021708387881517
+                }
+            }
+        },
+        "neck.top_down_blocks.0.short_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.9738347232341766,
+                    "min": -0.2740439474582672,
+                    "offset": -56,
+                    "scale": 0.004893641918897629
+                }
+            }
+        },
+        "neck.top_down_blocks.0.short_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.7676129341125488,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003010246902704239
+                }
+            }
+        },
+        "neck.top_down_blocks.0.short_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.149868130683899,
+                    "min": -1.1408847570419312,
+                    "offset": -127,
+                    "scale": 0.00898334477096796
+                }
+            }
+        },
+        "neck.top_down_blocks.1.blocks.0.conv1.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.17420470714569092,
+                    "min": -0.1408463418483734,
+                    "offset": -114,
+                    "scale": 0.0012354942737147212
+                }
+            }
+        },
+        "neck.top_down_blocks.1.blocks.0.conv1.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5696083307266235,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0022337581031024456
+                }
+            }
+        },
+        "neck.top_down_blocks.1.blocks.0.conv1.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.30131441354751587,
+                    "min": -0.36681753396987915,
+                    "offset": -140,
+                    "scale": 0.002620125189423561
+                }
+            }
+        },
+        "neck.top_down_blocks.1.blocks.0.conv2.depthwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.06196864694356918,
+                    "min": -0.08300388604402542,
+                    "offset": -146,
+                    "scale": 0.0005685197538696229
+                }
+            }
+        },
+        "neck.top_down_blocks.1.blocks.0.conv2.depthwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5379122495651245,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0021094598341733217
+                }
+            }
+        },
+        "neck.top_down_blocks.1.blocks.0.conv2.depthwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.15281952917575836,
+                    "min": -0.1401803344488144,
+                    "offset": -122,
+                    "scale": 0.0011490191100165248
+                }
+            }
+        },
+        "neck.top_down_blocks.1.blocks.0.conv2.pointwise_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.014020361006259918,
+                    "min": -0.013910828158259392,
+                    "offset": -127,
+                    "scale": 0.00010953407763736323
+                }
+            }
+        },
+        "neck.top_down_blocks.1.blocks.0.conv2.pointwise_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5104831457138062,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.002001894637942314
+                }
+            }
+        },
+        "neck.top_down_blocks.1.blocks.0.conv2.pointwise_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.027927562594413757,
+                    "min": -0.02770937606692314,
+                    "offset": -127,
+                    "scale": 0.00021818406821694225
+                }
+            }
+        },
+        "neck.top_down_blocks.1.final_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.18903204798698425,
+                    "min": -0.15283441543579102,
+                    "offset": -114,
+                    "scale": 0.0013406528159976006
+                }
+            }
+        },
+        "neck.top_down_blocks.1.final_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.5617961883544922,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0022031222470104694
+                }
+            }
+        },
+        "neck.top_down_blocks.1.final_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.25311553478240967,
+                    "min": -0.30814069509506226,
+                    "offset": -140,
+                    "scale": 0.002201004885137081
+                }
+            }
+        },
+        "neck.top_down_blocks.1.main_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.1918841898441315,
+                    "min": -0.27637895941734314,
+                    "offset": -48,
+                    "scale": 0.005757894832640886
+                }
+            }
+        },
+        "neck.top_down_blocks.1.main_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.7812012434005737,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.0030635343864560127
+                }
+            }
+        },
+        "neck.top_down_blocks.1.main_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.4743666648864746,
+                    "min": -1.1920411586761475,
+                    "offset": -114,
+                    "scale": 0.010456501506268978
+                }
+            }
+        },
+        "neck.top_down_blocks.1.module_cat_8": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.367571860551834,
+                    "min": -0.27738484740257263,
+                    "offset": -43,
+                    "scale": 0.006450810469686985
+                }
+            }
+        },
+        "neck.top_down_blocks.1.short_conv.activate.mul": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.367571860551834,
+                    "min": -0.27738484740257263,
+                    "offset": -43,
+                    "scale": 0.006450810469686985
+                }
+            }
+        },
+        "neck.top_down_blocks.1.short_conv.activate.sigmoid": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 0.7796911001205444,
+                    "min": 0.0,
+                    "offset": 0,
+                    "scale": 0.003057612106204033
+                }
+            }
+        },
+        "neck.top_down_blocks.1.short_conv.conv": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.1752796173095703,
+                    "min": -1.4307751655578613,
+                    "offset": -140,
+                    "scale": 0.010219822637736797
+                }
+            }
+        },
+        "neck.upsample": {
+            "output": {
+                "0": {
+                    "bitwidth": 8,
+                    "dtype": "int",
+                    "is_symmetric": "False",
+                    "max": 1.2853181958198547,
+                    "min": -0.2680284380912781,
+                    "offset": -44,
+                    "scale": 0.006091555580496788
+                }
+            }
+        }
+    },
+    "excluded_layers": [
+        "backbone.stem.0.bn.module_batch_norm",
+        "backbone.stem.1.bn.module_batch_norm_1",
+        "backbone.stem.2.bn.module_batch_norm_2",
+        "backbone.stage1.0.bn.module_batch_norm_3",
+        "backbone.stage1.1.short_conv.bn.module_batch_norm_4",
+        "backbone.stage1.1.main_conv.bn.module_batch_norm_5",
+        "backbone.stage1.1.blocks.0.conv1.bn.module_batch_norm_6",
+        "backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.module_batch_norm_7",
+        "backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.module_batch_norm_8",
+        "backbone.stage1.1.final_conv.bn.module_batch_norm_9",
+        "backbone.stage2.0.bn.module_batch_norm_10",
+        "backbone.stage2.1.short_conv.bn.module_batch_norm_11",
+        "backbone.stage2.1.main_conv.bn.module_batch_norm_12",
+        "backbone.stage2.1.blocks.0.conv1.bn.module_batch_norm_13",
+        "backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.module_batch_norm_14",
+        "backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.module_batch_norm_15",
+        "backbone.stage2.1.final_conv.bn.module_batch_norm_16",
+        "backbone.stage3.0.bn.module_batch_norm_17",
+        "backbone.stage3.1.short_conv.bn.module_batch_norm_18",
+        "backbone.stage3.1.main_conv.bn.module_batch_norm_19",
+        "backbone.stage3.1.blocks.0.conv1.bn.module_batch_norm_20",
+        "backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.module_batch_norm_21",
+        "backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.module_batch_norm_22",
+        "backbone.stage3.1.final_conv.bn.module_batch_norm_23",
+        "backbone.stage4.0.bn.module_batch_norm_24",
+        "backbone.stage4.1.conv1.bn.module_batch_norm_25",
+        "backbone.stage4.1.conv2.bn.module_batch_norm_26",
+        "backbone.stage4.2.short_conv.bn.module_batch_norm_27",
+        "backbone.stage4.2.main_conv.bn.module_batch_norm_28",
+        "backbone.stage4.2.blocks.0.conv1.bn.module_batch_norm_29",
+        "backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.module_batch_norm_30",
+        "backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.module_batch_norm_31",
+        "backbone.stage4.2.final_conv.bn.module_batch_norm_32",
+        "neck.reduce_layers.0.bn.module_batch_norm_33",
+        "neck.reduce_layers.1.bn.module_batch_norm_40",
+        "neck.top_down_blocks.0.short_conv.bn.module_batch_norm_34",
+        "neck.top_down_blocks.0.main_conv.bn.module_batch_norm_35",
+        "neck.top_down_blocks.0.blocks.0.conv1.bn.module_batch_norm_36",
+        "neck.top_down_blocks.0.blocks.0.conv2.depthwise_conv.bn.module_batch_norm_37",
+        "neck.top_down_blocks.0.blocks.0.conv2.pointwise_conv.bn.module_batch_norm_38",
+        "neck.top_down_blocks.0.final_conv.bn.module_batch_norm_39",
+        "neck.top_down_blocks.1.short_conv.bn.module_batch_norm_41",
+        "neck.top_down_blocks.1.main_conv.bn.module_batch_norm_42",
+        "neck.top_down_blocks.1.blocks.0.conv1.bn.module_batch_norm_43",
+        "neck.top_down_blocks.1.blocks.0.conv2.depthwise_conv.bn.module_batch_norm_44",
+        "neck.top_down_blocks.1.blocks.0.conv2.pointwise_conv.bn.module_batch_norm_45",
+        "neck.top_down_blocks.1.final_conv.bn.module_batch_norm_46",
+        "neck.downsamples.0.bn.module_batch_norm_47",
+        "neck.downsamples.1.bn.module_batch_norm_54",
+        "neck.bottom_up_blocks.0.short_conv.bn.module_batch_norm_48",
+        "neck.bottom_up_blocks.0.main_conv.bn.module_batch_norm_49",
+        "neck.bottom_up_blocks.0.blocks.0.conv1.bn.module_batch_norm_50",
+        "neck.bottom_up_blocks.0.blocks.0.conv2.depthwise_conv.bn.module_batch_norm_51",
+        "neck.bottom_up_blocks.0.blocks.0.conv2.pointwise_conv.bn.module_batch_norm_52",
+        "neck.bottom_up_blocks.0.final_conv.bn.module_batch_norm_53",
+        "neck.bottom_up_blocks.1.short_conv.bn.module_batch_norm_55",
+        "neck.bottom_up_blocks.1.main_conv.bn.module_batch_norm_56",
+        "neck.bottom_up_blocks.1.blocks.0.conv1.bn.module_batch_norm_57",
+        "neck.bottom_up_blocks.1.blocks.0.conv2.depthwise_conv.bn.module_batch_norm_58",
+        "neck.bottom_up_blocks.1.blocks.0.conv2.pointwise_conv.bn.module_batch_norm_59",
+        "neck.bottom_up_blocks.1.final_conv.bn.module_batch_norm_60",
+        "neck.out_convs.0.bn.module_batch_norm_61",
+        "neck.out_convs.1.bn.module_batch_norm_62",
+        "neck.out_convs.2.bn.module_batch_norm_63"
+    ],
+    "param_encodings": {
+        "backbone.stage1.0.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.0123552083969116,
+                "min": -1.0203264951705933,
+                "offset": -128,
+                "scale": 0.00797130074352026
+            }
+        ],
+        "backbone.stage1.1.attention.fc.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.2107268571853638,
+                "min": -1.2202600240707397,
+                "offset": -128,
+                "scale": 0.009533281438052654
+            }
+        ],
+        "backbone.stage1.1.blocks.0.conv1.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.2685636281967163,
+                "min": -1.2785524129867554,
+                "offset": -128,
+                "scale": 0.009988690726459026
+            }
+        ],
+        "backbone.stage1.1.blocks.0.conv2.depthwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.0384594202041626,
+                "min": -1.0466362237930298,
+                "offset": -128,
+                "scale": 0.008176845498383045
+            }
+        ],
+        "backbone.stage1.1.blocks.0.conv2.pointwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.8233513236045837,
+                "min": -0.8298344016075134,
+                "offset": -128,
+                "scale": 0.006483081262558699
+            }
+        ],
+        "backbone.stage1.1.final_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.2560416460037231,
+                "min": -1.2659317255020142,
+                "offset": -128,
+                "scale": 0.009890091605484486
+            }
+        ],
+        "backbone.stage1.1.main_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.7870507836341858,
+                "min": -0.7932479977607727,
+                "offset": -128,
+                "scale": 0.006197249982506037
+            }
+        ],
+        "backbone.stage1.1.short_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.4022616147994995,
+                "min": -1.413303017616272,
+                "offset": -128,
+                "scale": 0.011041429825127125
+            }
+        ],
+        "backbone.stage2.0.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.1764835119247437,
+                "min": -1.1857472658157349,
+                "offset": -128,
+                "scale": 0.009263650514185429
+            }
+        ],
+        "backbone.stage2.1.attention.fc.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.0168838500976562,
+                "min": -1.0248908996582031,
+                "offset": -128,
+                "scale": 0.008006960153579712
+            }
+        ],
+        "backbone.stage2.1.blocks.0.conv1.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 3.034151315689087,
+                "min": -3.058042287826538,
+                "offset": -128,
+                "scale": 0.02389095537364483
+            }
+        ],
+        "backbone.stage2.1.blocks.0.conv2.depthwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.8913570642471313,
+                "min": -1.9062496423721313,
+                "offset": -128,
+                "scale": 0.014892575331032276
+            }
+        ],
+        "backbone.stage2.1.blocks.0.conv2.pointwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.6595709323883057,
+                "min": -1.6726384162902832,
+                "offset": -128,
+                "scale": 0.013067487627267838
+            }
+        ],
+        "backbone.stage2.1.final_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 2.05888295173645,
+                "min": -2.07509446144104,
+                "offset": -128,
+                "scale": 0.016211675480008125
+            }
+        ],
+        "backbone.stage2.1.main_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.3401658535003662,
+                "min": -1.3507182598114014,
+                "offset": -128,
+                "scale": 0.010552486404776573
+            }
+        ],
+        "backbone.stage2.1.short_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.9865149855613708,
+                "min": -0.9942827820777893,
+                "offset": -128,
+                "scale": 0.007767834234982729
+            }
+        ],
+        "backbone.stage3.0.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.1283918619155884,
+                "min": -1.1372767686843872,
+                "offset": -128,
+                "scale": 0.008884974755346775
+            }
+        ],
+        "backbone.stage3.1.attention.fc.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.3993624448776245,
+                "min": -1.4103809595108032,
+                "offset": -128,
+                "scale": 0.01101860124617815
+            }
+        ],
+        "backbone.stage3.1.blocks.0.conv1.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 3.3187053203582764,
+                "min": -3.344836950302124,
+                "offset": -128,
+                "scale": 0.026131538674235344
+            }
+        ],
+        "backbone.stage3.1.blocks.0.conv2.depthwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.2603838443756104,
+                "min": -1.270308017730713,
+                "offset": -128,
+                "scale": 0.009924281388521194
+            }
+        ],
+        "backbone.stage3.1.blocks.0.conv2.pointwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 2.509828567504883,
+                "min": -2.5295910835266113,
+                "offset": -128,
+                "scale": 0.01976243034005165
+            }
+        ],
+        "backbone.stage3.1.final_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.5518932342529297,
+                "min": -1.564112901687622,
+                "offset": -128,
+                "scale": 0.012219632044434547
+            }
+        ],
+        "backbone.stage3.1.main_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.4669743776321411,
+                "min": -1.4785252809524536,
+                "offset": -128,
+                "scale": 0.011550978757441044
+            }
+        ],
+        "backbone.stage3.1.short_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.9428120851516724,
+                "min": -0.9502358436584473,
+                "offset": -128,
+                "scale": 0.007423717528581619
+            }
+        ],
+        "backbone.stage4.0.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.1251863241195679,
+                "min": -1.134045958518982,
+                "offset": -128,
+                "scale": 0.008859734050929546
+            }
+        ],
+        "backbone.stage4.1.conv1.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.6051477193832397,
+                "min": -1.6177867650985718,
+                "offset": -128,
+                "scale": 0.012638959102332592
+            }
+        ],
+        "backbone.stage4.1.conv2.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.8255460858345032,
+                "min": -0.8320464491844177,
+                "offset": -128,
+                "scale": 0.0065003628842532635
+            }
+        ],
+        "backbone.stage4.2.attention.fc.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 2.0264077186584473,
+                "min": -2.0423636436462402,
+                "offset": -128,
+                "scale": 0.015955965965986252
+            }
+        ],
+        "backbone.stage4.2.blocks.0.conv1.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.8201217651367188,
+                "min": -0.8265794515609741,
+                "offset": -128,
+                "scale": 0.00645765196532011
+            }
+        ],
+        "backbone.stage4.2.blocks.0.conv2.depthwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.9929543733596802,
+                "min": -1.0007729530334473,
+                "offset": -128,
+                "scale": 0.007818538695573807
+            }
+        ],
+        "backbone.stage4.2.blocks.0.conv2.pointwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.9213685393333435,
+                "min": -0.928623378276825,
+                "offset": -128,
+                "scale": 0.007254870142787695
+            }
+        ],
+        "backbone.stage4.2.final_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.1381646394729614,
+                "min": -1.14712655544281,
+                "offset": -128,
+                "scale": 0.008961926214396954
+            }
+        ],
+        "backbone.stage4.2.main_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.8216197490692139,
+                "min": -0.8280892372131348,
+                "offset": -128,
+                "scale": 0.006469447165727615
+            }
+        ],
+        "backbone.stage4.2.short_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.6010679602622986,
+                "min": -0.6058008074760437,
+                "offset": -128,
+                "scale": 0.004732818808406591
+            }
+        ],
+        "backbone.stem.0.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.4320029020309448,
+                "min": -0.4354044795036316,
+                "offset": -128,
+                "scale": 0.003401597496122122
+            }
+        ],
+        "backbone.stem.1.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.0989636182785034,
+                "min": -1.1076167821884155,
+                "offset": -128,
+                "scale": 0.008653256110846996
+            }
+        ],
+        "backbone.stem.2.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 1.0288276672363281,
+                "min": -1.036928653717041,
+                "offset": -128,
+                "scale": 0.008101005107164383
+            }
+        ],
+        "neck.bottom_up_blocks.0.blocks.0.conv1.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.034092310816049576,
+                "min": -0.03436075523495674,
+                "offset": -128,
+                "scale": 0.00026844340027309954
+            }
+        ],
+        "neck.bottom_up_blocks.0.blocks.0.conv2.depthwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.20014958083629608,
+                "min": -0.2017255574464798,
+                "offset": -128,
+                "scale": 0.0015759809175506234
+            }
+        ],
+        "neck.bottom_up_blocks.0.blocks.0.conv2.pointwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.10227397829294205,
+                "min": -0.10307928174734116,
+                "offset": -128,
+                "scale": 0.0008053068886511028
+            }
+        ],
+        "neck.bottom_up_blocks.0.final_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.07231470197439194,
+                "min": -0.07288410514593124,
+                "offset": -128,
+                "scale": 0.0005694070714525878
+            }
+        ],
+        "neck.bottom_up_blocks.0.main_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.07231970876455307,
+                "min": -0.07288915663957596,
+                "offset": -128,
+                "scale": 0.0005694465362466872
+            }
+        ],
+        "neck.bottom_up_blocks.0.short_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.07231921702623367,
+                "min": -0.07288866490125656,
+                "offset": -128,
+                "scale": 0.0005694426945410669
+            }
+        ],
+        "neck.bottom_up_blocks.1.blocks.0.conv1.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.024106992408633232,
+                "min": -0.02429681085050106,
+                "offset": -128,
+                "scale": 0.00018981883476953954
+            }
+        ],
+        "neck.bottom_up_blocks.1.blocks.0.conv2.depthwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.20035117864608765,
+                "min": -0.2019287347793579,
+                "offset": -128,
+                "scale": 0.0015775682404637337
+            }
+        ],
+        "neck.bottom_up_blocks.1.blocks.0.conv2.pointwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.07232043147087097,
+                "min": -0.07288987934589386,
+                "offset": -128,
+                "scale": 0.0005694521823897958
+            }
+        ],
+        "neck.bottom_up_blocks.1.final_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.05113862827420235,
+                "min": -0.051541294902563095,
+                "offset": -128,
+                "scale": 0.0004026663664262742
+            }
+        ],
+        "neck.bottom_up_blocks.1.main_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.05113682895898819,
+                "min": -0.051539480686187744,
+                "offset": -128,
+                "scale": 0.00040265219286084175
+            }
+        ],
+        "neck.bottom_up_blocks.1.short_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.05113789439201355,
+                "min": -0.0515405535697937,
+                "offset": -128,
+                "scale": 0.0004026605747640133
+            }
+        ],
+        "neck.downsamples.0.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.03409211337566376,
+                "min": -0.03436055779457092,
+                "offset": -128,
+                "scale": 0.00026844185777008533
+            }
+        ],
+        "neck.downsamples.1.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.024106955155730247,
+                "min": -0.024296773597598076,
+                "offset": -128,
+                "scale": 0.00018981854373123497
+            }
+        ],
+        "neck.out_convs.0.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.034092407673597336,
+                "min": -0.0343608520925045,
+                "offset": -128,
+                "scale": 0.0002684441569726914
+            }
+        ],
+        "neck.out_convs.1.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.0241068284958601,
+                "min": -0.024296646937727928,
+                "offset": -128,
+                "scale": 0.00018981755420099944
+            }
+        ],
+        "neck.out_convs.2.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.017046121880412102,
+                "min": -0.017180344089865685,
+                "offset": -128,
+                "scale": 0.00013422143820207566
+            }
+        ],
+        "neck.reduce_layers.0.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.051137592643499374,
+                "min": -0.051540251821279526,
+                "offset": -128,
+                "scale": 0.0004026582173537463
+            }
+        ],
+        "neck.reduce_layers.1.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.07231158763170242,
+                "min": -0.07288097590208054,
+                "offset": -128,
+                "scale": 0.0005693826242350042
+            }
+        ],
+        "neck.top_down_blocks.0.blocks.0.conv1.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.03409206122159958,
+                "min": -0.034360505640506744,
+                "offset": -128,
+                "scale": 0.00026844145031645894
+            }
+        ],
+        "neck.top_down_blocks.0.blocks.0.conv2.depthwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.20041269063949585,
+                "min": -0.2019907534122467,
+                "offset": -128,
+                "scale": 0.0015780527610331774
+            }
+        ],
+        "neck.top_down_blocks.0.blocks.0.conv2.pointwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.10227048397064209,
+                "min": -0.10307575762271881,
+                "offset": -128,
+                "scale": 0.0008052793564274907
+            }
+        ],
+        "neck.top_down_blocks.0.final_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.07231917232275009,
+                "min": -0.07288862019777298,
+                "offset": -128,
+                "scale": 0.0005694423452951014
+            }
+        ],
+        "neck.top_down_blocks.0.main_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.051137056201696396,
+                "min": -0.05153970792889595,
+                "offset": -128,
+                "scale": 0.0004026539681944996
+            }
+        ],
+        "neck.top_down_blocks.0.short_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.05113780498504639,
+                "min": -0.05154046416282654,
+                "offset": -128,
+                "scale": 0.00040265987627208233
+            }
+        ],
+        "neck.top_down_blocks.1.blocks.0.conv1.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.048209257423877716,
+                "min": -0.04858885705471039,
+                "offset": -128,
+                "scale": 0.0003796004457399249
+            }
+        ],
+        "neck.top_down_blocks.1.blocks.0.conv2.depthwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.19820575416088104,
+                "min": -0.19976644217967987,
+                "offset": -128,
+                "scale": 0.001560675329528749
+            }
+        ],
+        "neck.top_down_blocks.1.blocks.0.conv2.pointwise_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.14461462199687958,
+                "min": -0.14575330913066864,
+                "offset": -128,
+                "scale": 0.0011386977275833488
+            }
+        ],
+        "neck.top_down_blocks.1.final_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.10224883258342743,
+                "min": -0.10305394232273102,
+                "offset": -128,
+                "scale": 0.0008051089243963361
+            }
+        ],
+        "neck.top_down_blocks.1.main_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.07226426154375076,
+                "min": -0.07283327728509903,
+                "offset": -128,
+                "scale": 0.0005690099787898362
+            }
+        ],
+        "neck.top_down_blocks.1.short_conv.conv.weight": [
+            {
+                "bitwidth": 8,
+                "dtype": "int",
+                "is_symmetric": "True",
+                "max": 0.07232000678777695,
+                "min": -0.07288945466279984,
+                "offset": -128,
+                "scale": 0.0005694488645531237
+            }
+        ]
+    },
+    "quantizer_args": {
+        "activation_bitwidth": 8,
+        "dtype": "int",
+        "is_symmetric": true,
+        "param_bitwidth": 8,
+        "per_channel_quantization": false,
+        "quant_scheme": "post_training_tf_enhanced"
+    },
+    "version": "0.6.1"
+}

@@ -3,6 +3,7 @@ import datetime
 import itertools
 import os.path as osp
 import tempfile
+import json
 from collections import OrderedDict
 from typing import Dict, List, Optional, Sequence, Union
 
@@ -81,7 +82,8 @@ class CocoMetric(BaseMetric):
                  collect_device: str = 'cpu',
                  prefix: Optional[str] = None,
                  sort_categories: bool = False,
-                 use_mp_eval: bool = False) -> None:
+                 use_mp_eval: bool = False,
+                 dataset_meta: Optional[Dict] = None) -> None:
         super().__init__(collect_device=collect_device, prefix=prefix)
         # coco evaluation metrics
         self.metrics = metric if isinstance(metric, list) else [metric]
@@ -113,6 +115,10 @@ class CocoMetric(BaseMetric):
             'be saved to a temp directory which will be cleaned up at the end.'
 
         self.outfile_prefix = outfile_prefix
+        # handle dataset lazy init
+        self.cat_ids = None
+        self.img_ids = None
+        self.dataset_meta = dataset_meta
 
         self.backend_args = backend_args
         if file_client_args is not None:
@@ -122,8 +128,6 @@ class CocoMetric(BaseMetric):
                 'https://github.com/open-mmlab/mmdetection/blob/main/configs/_base_/datasets/coco_detection.py'  # noqa: E501
             )
 
-        # if ann_file is not specified,
-        # initialize coco api with the converted dataset
         if ann_file is not None:
             with get_local_path(
                     ann_file, backend_args=self.backend_args) as local_path:
@@ -141,10 +145,11 @@ class CocoMetric(BaseMetric):
                     self._coco_api.dataset['categories'] = sorted_categories
         else:
             self._coco_api = None
+        # if ann_file is not specified,
+        # initialize coco api with the converted dataset
 
-        # handle dataset lazy init
-        self.cat_ids = None
-        self.img_ids = None
+    def __call__(self, results: List[dict]) -> Dict[str, float]:
+        return self.compute_metrics(results)
 
     def fast_eval_recall(self,
                          results: List[dict],
@@ -228,7 +233,8 @@ class CocoMetric(BaseMetric):
             values are corresponding filenames.
         """
         bbox_json_results = []
-        segm_json_results = [] if 'masks' in results[0] else None
+        # segm_json_results = [] if 'masks' in results[0] else None
+        segm_json_results = None
         for idx, result in enumerate(results):
             image_id = result.get('img_id', idx)
             labels = result['labels']
@@ -241,6 +247,7 @@ class CocoMetric(BaseMetric):
                 data['bbox'] = self.xyxy2xywh(bboxes[i])
                 data['score'] = float(scores[i])
                 data['category_id'] = self.cat_ids[label]
+                data['image_loc'] = "image_{:04d}.png".format(image_id)
                 bbox_json_results.append(data)
 
             if segm_json_results is None:
@@ -396,7 +403,8 @@ class CocoMetric(BaseMetric):
         logger: MMLogger = MMLogger.get_current_instance()
 
         # split gt and prediction list
-        gts, preds = zip(*results)
+        # gts, preds = zip(*results)
+        preds = results
 
         tmp_dir = None
         if self.outfile_prefix is None:
@@ -450,6 +458,7 @@ class CocoMetric(BaseMetric):
                 raise KeyError(f'{metric} is not in results')
             try:
                 predictions = load(result_files[metric])
+
                 if iou_type == 'segm':
                     # Refer to https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/coco.py#L331  # noqa
                     # When evaluating mask AP, if the results contain bbox,
@@ -459,6 +468,7 @@ class CocoMetric(BaseMetric):
                     # small/medium/large mask AP results.
                     for x in predictions:
                         x.pop('bbox')
+                # pprint(predictions)
                 coco_dt = self._coco_api.loadRes(predictions)
 
             except IndexError:
@@ -588,9 +598,9 @@ class CocoMetric(BaseMetric):
                     eval_results[key] = float(f'{round(val, 3)}')
 
                 ap = coco_eval.stats[:6]
-                logger.info(f'{metric}_mAP_copypaste: {ap[0]:.3f} '
-                            f'{ap[1]:.3f} {ap[2]:.3f} {ap[3]:.3f} '
-                            f'{ap[4]:.3f} {ap[5]:.3f}')
+                # logger.info(f'{metric}_mAP_copypaste: {ap[0]:.3f} '
+                #             f'{ap[1]:.3f} {ap[2]:.3f} {ap[3]:.3f} '
+                            # f'{ap[4]:.3f} {ap[5]:.3f}')
 
         if tmp_dir is not None:
             tmp_dir.cleanup()

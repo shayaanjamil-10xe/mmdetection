@@ -1,0 +1,8 @@
+{
+    "bbox_mAP": 0.391,
+    "bbox_mAP_50": 0.557,
+    "bbox_mAP_75": 0.427,
+    "bbox_mAP_s": 0.196,
+    "bbox_mAP_m": 0.436,
+    "bbox_mAP_l": 0.554
+}

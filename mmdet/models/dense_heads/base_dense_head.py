@@ -113,6 +113,14 @@ class BaseDenseHead(BaseModule, metaclass=ABCMeta):
             dict: A dictionary of loss components.
         """
         outs = self(x)
+        
+        temp_outputs = []
+        for o in outs:
+            temp_o = []
+            for t in o:
+                temp_o.append(t.cpu())
+            temp_outputs.append(tuple(temp_o))
+        outs = tuple(temp_outputs)
 
         #### TAKE THIS OUTSIDE INTO TRAIN_STEP
         outputs = unpack_gt_instances(batch_data_samples)
@@ -122,7 +130,7 @@ class BaseDenseHead(BaseModule, metaclass=ABCMeta):
         loss_inputs = outs + (batch_gt_instances, batch_img_metas,
                               batch_gt_instances_ignore)
         losses = self.loss_by_feat(*loss_inputs)
-        return outs
+        return losses
 
     @abstractmethod
     def loss_by_feat(self, **kwargs) -> dict:
